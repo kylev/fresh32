@@ -2,12 +2,12 @@ require 'spec_helper'
 
 describe PagesController do
 
-  describe "GET 'index'" do
-    it "returns http success and the index template" do
-      get 'index'
+  describe "GET 'with_slim'" do
+    it "returns http success and the with_slim template" do
+      get 'with_slim'
       puts response.inspect
       response.should be_success
-      response.should render_template 'index'
+      response.should render_template 'with_slim'
     end
   end
 
@@ -16,6 +16,14 @@ describe PagesController do
       get 'with_erb'
       response.should be_success
       response.should render_template 'with_erb'
+    end
+  end
+
+  describe "GET 'with_haml'" do
+    it "returns http success and the with_haml template" do
+      get 'with_haml'
+      response.should be_success
+      response.should render_template 'with_haml'
     end
   end
 end

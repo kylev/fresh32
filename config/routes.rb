@@ -1,6 +1,7 @@
 Fresh32::Application.routes.draw do
-  get "pages/index"
+  get "pages/with_slim"
   get "pages/with_erb"
+  get "pages/with_haml"
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
