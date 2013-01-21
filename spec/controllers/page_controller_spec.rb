@@ -11,4 +11,11 @@ describe PageController do
     end
   end
 
+  describe "GET 'with_erb'" do
+    it "returns http success and the with_erb template" do
+      get 'with_erb'
+      response.should be_success
+      response.should render_template 'with_erb'
+    end
+  end
 end
