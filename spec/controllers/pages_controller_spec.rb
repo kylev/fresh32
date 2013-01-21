@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe PageController do
+describe PagesController do
 
   describe "GET 'index'" do
     it "returns http success and the index template" do
